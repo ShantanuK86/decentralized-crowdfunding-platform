@@ -4,7 +4,7 @@ export default function FooterComponent(props) {
   return (
     <div className="footer">
       <div className="footerContainer">
-        <div className="trademarkSection">DeFindstarter © 2022</div>
+        <div className="trademarkSection">DeFindstarter © 2023</div>
         <div className="externalLinks">
           <div className="linkWrapper">
             <div className="icon">
