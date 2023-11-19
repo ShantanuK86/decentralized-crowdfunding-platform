@@ -67,7 +67,7 @@ function PaymentModal(props) {
           <button className="submit" onClick={() => sendFund()}>
             Fund
           </button>
-        </div>
+        </div>  
       </div>
     </div>
   );
