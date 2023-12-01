@@ -151,7 +151,6 @@ function CreateProjectComponent(props) {
           required
           onChange={handleChange}
         />
-        <p className="caution">*Image of resolution 1920x1080 is preffered for better display</p>
         <label>Project Link</label>
         <input
           type="url"
