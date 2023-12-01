@@ -230,6 +230,7 @@ function ProjectComponent(props) {
   }
 
   // claim refund by calling the function in the smart contract
+  const staticImageUrl = "https://i.pinimg.com/564x/ce/f4/da/cef4da9603b3c7f8fb2168911a67e88f.jpg";
   async function claimRefund() {
       let txn;
       try {
@@ -274,7 +275,7 @@ function ProjectComponent(props) {
           <div className="projectImage">
             <img
               src={
-                projectDetails.cid ? "https://" + projectDetails.cid : dummyPic
+                staticImageUrl
               }
               alt="test-pic"
             />
