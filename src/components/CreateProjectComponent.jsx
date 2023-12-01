@@ -11,7 +11,7 @@ function CreateProjectComponent(props) {
     link: "",
     goal: 0.00001,
     duration: 1,
-    refundPolicy: "",
+    refundPolicy: "refundable",
   });
 
   const [inputImage, setInputImage] = useState(null);
@@ -45,7 +45,7 @@ function CreateProjectComponent(props) {
   // return refund policy code
   function getRefundPolicyCode() {
     let refundCode = {
-      refundable: 0,
+      "refundable": 0,
       "non-refundable": 1,
     };
     return refundCode[formInput["refundPolicy"]];
