@@ -59,7 +59,7 @@ export default function HomeComponent(props) {
       console.log(err);
     }
   };
-
+  const staticImageUrl = "https://i.pinimg.com/564x/ce/f4/da/cef4da9603b3c7f8fb2168911a67e88f.jpg";
   const renderRecommendations = (val) => {
     return val.map((project, index) => {
       return (
@@ -68,8 +68,8 @@ export default function HomeComponent(props) {
             <div
               className="rcmdCardImg"
               style={{
-                backgroundImage: project.cid
-                  ? `url(${"https://" + project.cid})`
+                backgroundImage: staticImageUrl
+                  ? `url(${staticImageUrl})`
                   : dummyPic,
               }}
             ></div>
@@ -131,8 +131,8 @@ export default function HomeComponent(props) {
                 <div
                   className="featuredCardProjectImg"
                   style={{
-                    backgroundImage: featuredRcmd[0].cid
-                      ? `url(${"https://" + featuredRcmd[0].cid})`
+                    backgroundImage: staticImageUrl
+                      ? `url(${staticImageUrl})`
                       : dummyPic,
                   }}
                 ></div>

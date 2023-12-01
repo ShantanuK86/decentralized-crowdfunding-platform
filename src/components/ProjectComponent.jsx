@@ -52,9 +52,9 @@ function ProjectComponent(props) {
           projectLink,
           amount,
           creatorAddress,
-          refundPolicy,
+          //refundPolicy,
           category,
-          refundClaimed,
+          //refundClaimed,
           claimedAmount,
         } = { ...res };        
 
@@ -63,7 +63,7 @@ function ProjectComponent(props) {
           tmp.push({
             contributor: contributors[index],
             amount: amount[index],
-            refundClaimed: refundClaimed[index]
+            //refundClaimed: refundClaimed[index]
           });
         }
 
@@ -91,9 +91,9 @@ function ProjectComponent(props) {
           projectLink: projectLink,
           amount: amountCopy,
           creatorAddress: creatorAddress,
-          refundPolicy: refundPolicy,
+          //refundPolicy: refundPolicy,
           category: category,
-          refundClaimed: refundClaimedCopy,
+          //refundClaimed: refundClaimedCopy,
           claimedAmount: claimedAmount,
         });
       });
@@ -200,9 +200,9 @@ function ProjectComponent(props) {
             projectLink: projectDetails.projectLink,
             amount: projectDetails.amount,
             creatorAddress: projectDetails.creatorAddress,
-            refundPolicy: projectDetails.refundPolicy,
+            //refundPolicy: projectDetails.refundPolicy,
             category: projectDetails.category,
-            refundClaimed: projectDetails.refundClaimed,
+            //refundClaimed: projectDetails.refundClaimed,
             claimedAmount: true
           });
 
@@ -252,7 +252,7 @@ function ProjectComponent(props) {
             projectLink: projectDetails.projectLink,
             amount: projectDetails.amount,
             creatorAddress: projectDetails.creatorAddress,
-            refundPolicy: projectDetails.refundPolicy,
+            //refundPolicy: projectDetails.refundPolicy,
             category: projectDetails.category,
             refundClaimed: refundClaimedCopy,
             claimedAmount: true
@@ -357,12 +357,6 @@ function ProjectComponent(props) {
             <p className="description">{projectDetails.projectDescription}</p>
           </div>
           <div className="projectLinkContainerWrapper">
-            <div className="projectLinkContainer">
-              <p className="projectLinkLabel">
-                Refund Policy:{" "}
-                {projectDetails.refundPolicy ? "Non-Refundable " : "Refundable"}
-              </p>
-            </div>
             <div className="projectLinkContainer">
               <p className="projectLinkLabel">
                 Project link:

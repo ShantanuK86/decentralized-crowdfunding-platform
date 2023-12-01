@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { create } from "ipfs-http-client";
 import { Web3Storage } from 'web3.storage';
 
 function CreateProjectComponent(props) {
@@ -8,10 +7,11 @@ function CreateProjectComponent(props) {
     projectName: "",
     description: "",
     creatorName: "",
+    image: "https://i.pinimg.com/564x/ce/f4/da/cef4da9603b3c7f8fb2168911a67e88f.jpg",
     link: "",
     goal: 0.00001,
     duration: 1,
-    refundPolicy: "refundable",
+    refundPolicy: "",
   });
 
   const [inputImage, setInputImage] = useState(null);
@@ -45,7 +45,7 @@ function CreateProjectComponent(props) {
   // return refund policy code
   function getRefundPolicyCode() {
     let refundCode = {
-      "refundable": 0,
+      refundable: 0,
       "non-refundable": 1,
     };
     return refundCode[formInput["refundPolicy"]];
@@ -72,7 +72,7 @@ function CreateProjectComponent(props) {
         return;
       }
     }
-
+    formInput["refundPolicy"] = 0;
     // check for double submit (since the formInput['category']) is changed to integer on first submit
     // if not checked, second submit gives undefined value since getCategoryCode() doesn't have any mapping for integer code.
     if (!Number.isInteger(formInput["category"])) {
@@ -151,6 +151,7 @@ function CreateProjectComponent(props) {
           required
           onChange={handleChange}
         />
+      
         <label>Project Link</label>
         <input
           type="url"
@@ -177,6 +178,7 @@ function CreateProjectComponent(props) {
           required
           onChange={handleChange}
         />
+        
         <input type="submit" className="submitButton" value="Submit" />
       </form>
     </div>

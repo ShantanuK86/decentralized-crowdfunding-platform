@@ -7,6 +7,7 @@ export default function ScrollShowbarComponent(props) {
     document.getElementsByClassName("recentUploadsContainer")[0].scrollLeft +=
       val;
   };
+  const staticImageUrl = "https://i.pinimg.com/564x/ce/f4/da/cef4da9603b3c7f8fb2168911a67e88f.jpg";
   const renderCards = () => {
     return props.recentUploads.map((project, index) => {
       return (
@@ -15,8 +16,8 @@ export default function ScrollShowbarComponent(props) {
             <div
               className="cardImg"
               style={{
-                backgroundImage: project.cid
-                  ? `url(${"https://" + project.cid})`
+                backgroundImage: staticImageUrl 
+                  ? `url(${staticImageUrl})`
                   : dummyPic,
               }}
             ></div>
