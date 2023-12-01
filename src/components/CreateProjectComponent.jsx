@@ -8,7 +8,6 @@ function CreateProjectComponent(props) {
     projectName: "",
     description: "",
     creatorName: "",
-    image: "",
     link: "",
     goal: 0.00001,
     duration: 1,
@@ -152,13 +151,6 @@ function CreateProjectComponent(props) {
           required
           onChange={handleChange}
         />
-        <label>Upload Project Image</label>
-        <input
-          type="file"
-          name="image"
-          accept="image/*"
-          onChange={handleImageChange}
-        />
         <p className="caution">*Image of resolution 1920x1080 is preffered for better display</p>
         <label>Project Link</label>
         <input
@@ -186,14 +178,6 @@ function CreateProjectComponent(props) {
           required
           onChange={handleChange}
         />
-        <label>Refund policy</label>
-        <select name="refundPolicy" required onChange={handleChange}>
-          <option value="" selected disabled hidden>
-            Select Refund type
-          </option>
-          <option value="refundable">Refundable</option>
-          <option value="non-refundable">Non-Refundable</option>
-        </select>
         <input type="submit" className="submitButton" value="Submit" />
       </form>
     </div>
